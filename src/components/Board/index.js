@@ -29,9 +29,9 @@ function Board() {
 
     useEffect(() => {
         function handleKeyDown(event) {
-            if (event.ctrlKey && event.key === "z") {
+            if (event.ctrlKey && (event.key === "z" || event.key === "Z")) {
                 undo();
-            } else if (event.ctrlKey && event.key === "y") {
+            } else if (event.ctrlKey && (event.key === "y" || event.key === "Y")) {
                 redo();
             }
         }
